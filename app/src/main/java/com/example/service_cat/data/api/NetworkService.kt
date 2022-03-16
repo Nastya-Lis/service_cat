@@ -26,7 +26,8 @@ object NetworkService {
 
             val request = chain
                 .request()
-                .newBuilder().addHeader("x-api-key", CustomConst.API_KEY)
+               .newBuilder()
+                //.addHeader("x-api-key", CustomConst.API_KEY)
                 .url(newUrl)
                 .build()
 
@@ -39,6 +40,7 @@ object NetworkService {
             .addInterceptor(baseInterceptor)
             .build()
 
+
         fun retrofitService(): Api {
             return Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -48,5 +50,7 @@ object NetworkService {
                 .create(Api::class.java)
                 //.create(Api::class.java)
         }
+
+   // val apiService: ApiService = retrofitService().create(ApiService::class.java)
 
 }

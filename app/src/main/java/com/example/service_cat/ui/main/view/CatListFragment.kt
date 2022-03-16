@@ -6,11 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
+import androidx.databinding.Bindable
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.service_cat.R
+import com.example.service_cat.ui.main.viewmodel.MainViewModel
 
 
 class CatListFragment : Fragment() {
+
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +31,11 @@ class CatListFragment : Fragment() {
         button.setOnClickListener{
             findNavController().navigate(R.id.action_catListFragment_to_catDetailFragment2)
         }
+
+        val text = view.findViewById<TextView>(R.id.textbreed)
+
+       // text.text = "bbbbeb"
+       text.text = viewModel.getBreedById("sib").value?.name
 
         return view
     }

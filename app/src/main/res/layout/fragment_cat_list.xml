@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.service_cat.ui.main.viewmodel.MainViewModel" />
+    </data>
+
+    <LinearLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="ui.main.view.CatListFragment">
 
+
     <TextView
+        android:id="@+id/textbreed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="List Fragment" />
+         />
 
     <Button
         android:id="@+id/buttonNavigate1"
@@ -19,5 +27,5 @@
         android:text="press to detail">
     </Button>
 
-
 </LinearLayout>
+</layout>

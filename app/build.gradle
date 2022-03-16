@@ -4,16 +4,20 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.service_cat"
         minSdk 21
-        targetSdk 30
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
     }
 
     buildTypes {
@@ -44,13 +48,10 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
 
     //ViewModel lifecycle
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.4.1'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
 
 
-    // https://mvnrepository.com/artifact/com.android.support/design
-    implementation 'com.androidx.support:design:27.1.1'
 
     // https://mvnrepository.com/artifact/androidx.fragment/fragment
     implementation 'androidx.fragment:fragment-ktx:1.4.1'

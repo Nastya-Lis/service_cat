@@ -1,9 +1,12 @@
 package com.example.service_cat.data.repository
 
 import com.example.service_cat.data.api.Api
+import com.example.service_cat.data.api.NetworkService
 import com.example.service_cat.data.model.Cat
 
-class CatRepository(private val apiCat: Api) {
+class CatRepository() {
+
+    private val apiCat: Api = NetworkService.retrofitService()
 
     suspend fun getCats(): List<Cat> = apiCat.getAllCats()
 
