@@ -23,5 +23,4 @@ data class Breed(
     val health_issues: Int,
     @SerializedName("social_needs")
     val social_needs: Int
-) {
-}
+)

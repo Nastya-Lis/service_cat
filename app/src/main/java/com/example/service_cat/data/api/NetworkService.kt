@@ -8,7 +8,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkService {
-        private const val BASE_URL = "https://thecatapi.com/api/v1/"
+        private const val BASE_URL = "https://api.thecatapi.com/v1/"
 
         private val loggingInterceptor = run{
             val httpLoggingInterceptor = HttpLoggingInterceptor()
@@ -27,7 +27,7 @@ object NetworkService {
             val request = chain
                 .request()
                .newBuilder()
-                //.addHeader("x-api-key", CustomConst.API_KEY)
+                .addHeader("x-api-key", CustomConst.API_KEY)
                 .url(newUrl)
                 .build()
 

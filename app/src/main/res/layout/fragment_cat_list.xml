@@ -14,7 +14,14 @@
     tools:context="ui.main.view.CatListFragment">
 
 
-    <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cat_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+
+    <!--<TextView
         android:id="@+id/textbreed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,6 +33,6 @@
         android:layout_height="wrap_content"
         android:text="press to detail">
     </Button>
-
+-->
 </LinearLayout>
 </layout>

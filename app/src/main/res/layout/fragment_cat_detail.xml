@@ -7,17 +7,72 @@
     android:orientation="vertical"
     tools:context="ui.main.view.CatDetailFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detail Fragment" />
+        android:columnCount="2">
+
+        <ImageView
+            android:id="@+id/id_image"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="4"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Category:">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp">
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Temperament:">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_temperament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp">
+        </com.google.android.material.textview.MaterialTextView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Wikipedia:">
+        </com.google.android.material.textview.MaterialTextView>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/id_wiki_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:textSize="20dp">
+        </com.google.android.material.textview.MaterialTextView>
+    </GridLayout>
 
 
     <Button
         android:id="@+id/buttonNavigate2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="back to list fragment"
+        android:text="back to list"
         >
 
     </Button>

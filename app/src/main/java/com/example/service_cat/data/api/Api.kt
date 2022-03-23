@@ -11,13 +11,13 @@ interface Api {
     @GET("categories")
     suspend fun getCategories(): List<Category>
 
-    @GET("images/search")
+    @GET("images/search?limit=12")
     suspend fun getAllCats(): List<Cat>
 
     @GET("images/{id}")
-    suspend fun getCatById(@Path("{id}") id:String): Cat
+    suspend fun getCatById(@Path("id") id: String): Cat
 
     @GET("breeds/search")
-    suspend fun getBreedByName(@Query("{q}") name:String): Breed
+    suspend fun getBreedByName(@Query("q") name: String): List<Breed>
 
 }
